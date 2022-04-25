@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Nippon Koei Phone Localiser</string>
+    <string name="ble_uuid">680c21d9-c946-4c1f-9c11-baa1c21329e7</string>
+
+
+    <string name="calibrate_tag">Tag</string>
+    <string name="calibrate">Calibrate</string>
+    <string name="auto_scan">Auto Scan</string>
+    <string name="welcome">Welcome!</string>
+    <string name="running">Running Auto-scan...</string>
+    <string name="not_calibrate_message">Not calibrated. Please calibrate before starting auto-scan.</string>
+    <string name="calibrated_message">Both anchors and tags are calibrated.</string>
+    <string name="only_anchors">Only anchors calibrated. Please calibrate your tags as well.</string>
+    <string name="none_calibrated">Please calibrate your anchors first.</string>
+    <string name="calibrate_anchor">Anchor</string>
+    <string name="show_calibration_menu">Show Calibration menu</string>
+    <string name="hide_calibration_menu">Hide Calibration menu</string>
+    <string name="mqtt_topic">testetst</string>
+</resources>

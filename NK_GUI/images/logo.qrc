@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="newPrefix">
+    <file>nk_logo_nk_blue_transparent.png</file>
+    <file>nk_logo_nk_blue_transparent - Resized.png</file>
+  </qresource>
+</RCC>

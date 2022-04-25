@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="71dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/nk_logo_nk_blue_transparent" />
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/welcome"
+        android:textAlignment="center"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="0.485"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayoutAutoScan"
+        android:layout_width="match_parent"
+        android:layout_height="94dp"
+
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/border"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayoutCalibrate">
+
+        <TextView
+            android:id="@+id/textViewSwitch"
+            android:layout_width="match_parent"
+            android:layout_height="21dp"
+            android:layout_weight="1"
+            android:text="@string/auto_scan"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switchScan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="140dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/border"
+            android:backgroundTint="#C1B8B8"
+            android:textColorHighlight="#1c74c3"
+            android:theme="@style/SCBSwitch"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/textViewStatusMessage"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/border"
+        android:text="Lorem ipsum blablablabalbalablablablabalbalbalbaddddddlablab"
+        android:textAlignment="textStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayoutCalibrate"
+        android:layout_width="match_parent"
+        android:layout_height="188dp"
+        android:background="@drawable/border"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.421"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonShowMenu">
+
+
+        <NumberPicker
+            android:id="@+id/numberPickerAnchor"
+            android:layout_width="97dp"
+            android:layout_height="72dp"
+            android:layout_marginStart="27dp"
+            android:layout_marginTop="2dp"
+            android:layout_weight="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+        <NumberPicker
+            android:id="@+id/numberPickerTag"
+            android:layout_width="97dp"
+            android:layout_height="72dp"
+            android:layout_marginStart="59dp"
+            android:layout_marginTop="2dp"
+            android:layout_weight="1"
+            app:layout_constraintStart_toEndOf="@+id/numberPickerAnchor"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+        <Button
+            android:id="@+id/buttonCalibrateAnchor"
+            android:layout_width="123dp"
+            android:layout_height="44dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="#1c74c3"
+            android:text="@string/calibrate_anchor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/numberPickerAnchor" />
+
+        <Button
+            android:id="@+id/buttonCalibrateTag"
+            android:layout_width="123dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="28dp"
+            android:backgroundTint="#1c74c3"
+            android:text="@string/calibrate_tag"
+            app:layout_constraintBottom_toBottomOf="@+id/buttonCalibrateAnchor"
+            app:layout_constraintStart_toEndOf="@+id/buttonCalibrateAnchor"
+            app:layout_constraintTop_toTopOf="@+id/buttonCalibrateAnchor"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Number of Anchors"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:text="Number of Tags"
+            app:layout_constraintBottom_toBottomOf="@+id/textView3"
+            app:layout_constraintStart_toEndOf="@+id/textView3"
+            app:layout_constraintTop_toTopOf="@+id/textView3"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/buttonEditMode"
+            android:layout_width="55dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/edit_mode"
+            android:textSize="8sp"
+            app:layout_constraintStart_toEndOf="@+id/numberPickerTag"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewEditMode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:text="Edit Mode ON"
+            android:textSize="8sp"
+            app:layout_constraintStart_toEndOf="@+id/numberPickerTag"
+            app:layout_constraintTop_toBottomOf="@+id/buttonEditMode" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/buttonShowMenu"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        android:backgroundTint="#1c74c3"
+        android:drawableRight="@drawable/expand"
+        android:text="Show Calibration Menu"
+        android:textAlignment="viewStart"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTitle" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Status Message"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayoutAutoScan" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
